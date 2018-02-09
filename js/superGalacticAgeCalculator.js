@@ -1,9 +1,11 @@
+let moment = require('moment');
+
 export class SuperGalacticAgeCalculator {
   constructor(dateOfBirth) {
-    this.userDateOfBirth = dateOfBirth;
+
+    this.userDateOfBirth = moment(dateOfBirth);
     //take age in years and convert into seconds
-    this.userAgeInSeconds = (2018 - parseInt(dateOfBirth.split('-')[0])) * 365 * 24 * 60 * 60;
-    //take two dates and determine difference in seconds (ie. compare dob w/ current time to get accurate age)
+    this.userAgeInSeconds = (moment().year() - this.userDateOfBirth.year()) * 365 * 24 * 60 * 60;
 
   }
 
@@ -14,9 +16,19 @@ export class SuperGalacticAgeCalculator {
   getUserAgeInSeconds() {
     return this.userAgeInSeconds;
   }
-  // 1 mercuryYear = 0.24 earthYear
-  mercuryAge() {
 
+  //take two dates and determine difference in seconds (for ease it is returned as the absolute value of the difference)
+  compareDates(dateOne, dateTwo) {
+    return  Math.abs(dateOne.format("X") - dateTwo.format("X"));
+  }
+
+
+  // 31536000 seconds per year
+
+  // 1 mercuryYear = 0.24 earthYear or 7568640 earthSeconds
+
+  mercuryAge() {
+    return Math.floor(this.userAgeInSeconds / 7568640); // age in earthSeconds/ mercuryYear in seconds rounded down to int value
   }
 
   // 1 venusYear = 0.62 earthYear
