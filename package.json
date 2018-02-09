@@ -42,5 +42,6 @@
   "bugs": {
     "url": "https://github.com/ashmortar/super-galactic-age-calculator/issues"
   },
-  "homepage": "https://github.com/ashmortar/super-galactic-age-calculator#readme"
+  "homepage": "https://github.com/ashmortar/super-galactic-age-calculator#readme",
+  "dependencies": {}
 }
