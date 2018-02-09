@@ -2,9 +2,86 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="build/css/vendor.css">
+    <link rel="stylesheet" href="build/css/app.css">
+    <script src="build/js/vendor.min.js"></script>
+    <script type="text/javascript" src="build/js/app.js"></script>
+    <title>Super Galactic Age Calculator</title>
   </head>
   <body>
-
+    <div class="jumbotron">
+      <h1>SuperGalacticAgeCalculator</h1>
+      <p>where space and age intersect</p>
+    </div>
+    <div class="container">
+        <h3>data in, interesting facts out</h3>
+        <p>please input your date of birth and life expectancy below:</p>
+        <form id="user-input">
+          <div class="form-group">
+            <label for="date-of-birth">Date of Birth: </label>
+            <input type="date" name="date-of-birth" id="date-of-birth" value="1985-03-25">
+          </div>
+        <div class="form-group">
+          <label for="life-expectancy">Life Expectancy: </label>
+          <input type="number" name="life-expectancy" id="life-expectancy" value="80">
+        </div>
+        <button type="submit" class="btn btn-success">facts:</button>
+      </form>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel">
+            <div class="panel-header">
+              <h3><strong>Mercury</strong></h3>
+            </div>
+              <div class="panel-body" id="mercury-stuff">
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel">
+            <div class="panel-header">
+              <h3><strong>Venus</strong></h3>
+            </div>
+              <div class="panel-body" id="venus-stuff">
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel">
+            <div class="panel-header">
+              <h3><strong>Mars</strong></h3>
+            </div>
+              <div class="panel-body" id="mars-stuff">
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel">
+            <div class="panel-header">
+              <h3><strong>Jupiter</strong></h3>
+            </div>
+              <div class="panel-body" id="jupiter-stuff">
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel">
+            <div class="panel-header">
+              <h3><strong>Other</strong></h3>
+            </div>
+              <div class="panel-body" id="other-stuff">
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

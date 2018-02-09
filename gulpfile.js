@@ -40,7 +40,7 @@ gulp.task('jshint', function(){
 
 //concatenate interfaces
 gulp.task('concatInterface', function() {
-  return gulp.src(['./js/sudoku-interface.js'])
+  return gulp.src(['./js/*-interface.js'])
     .pipe(concat('allConcat.js'))
     .pipe(gulp.dest('./tmp'));
 });
@@ -87,7 +87,7 @@ gulp.task('serve', function() {
   });
   gulp.watch(['js/*.js'], ['jsBuild']);
   gulp.watch(['bower.json'], ['bowerBuild']);
-  gulp.watch(['css/*.css'], ['jsBuild'])
+  gulp.watch(['css/*.css'], ['jsBuild']);
 });
 
 gulp.task('cssBuild', function() {
