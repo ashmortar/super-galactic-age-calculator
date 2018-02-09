@@ -1,15 +1,18 @@
 export class SuperGalacticAgeCalculator {
   constructor(dateOfBirth) {
     this.userDateOfBirth = dateOfBirth;
-    this.userYearOfBirth = dateOfBirth.split('-')[0];
-
     //take age in years and convert into seconds
+    this.userAgeInSeconds = (2018 - parseInt(dateOfBirth.split('-')[0])) * 365 * 24 * 60 * 60;
     //take two dates and determine difference in seconds (ie. compare dob w/ current time to get accurate age)
 
   }
 
   getUserDOB() {
     return this.userDateOfBirth;
+  }
+
+  getUserAgeInSeconds() {
+    return this.userAgeInSeconds;
   }
   // 1 mercuryYear = 0.24 earthYear
   mercuryAge() {

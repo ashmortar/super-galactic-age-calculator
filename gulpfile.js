@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var source = require('vinyl-source-stream');
 var browserify = require('browserify');
 var concat = require('gulp-concat');
+var moment = require('moment');
 var babelify = require('babelify');
 var uglify = require('gulp-uglify');
 var utilities = require('gulp-util');
