@@ -1,7 +1,25 @@
 body {
-  text-align: center;
+  background-image: url(https://www.nasa.gov/images/content/54345main_ic1396_highres.jpg);
+  color: lightgray;
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: 1.4em;
 }
 
-.well {
-  background-color: lightgray;
+.jumbotron {
+background-color: rgba(50, 50, 50, 0.6);
+}
+
+.panel {
+  background-color: rgba(50, 50, 50, 0.6);
+  margin-top: 5%;
+}
+
+
+.panel p {
+  text-align: left;
+}
+
+.panel .form-group {
+  text-align: left;
 }
