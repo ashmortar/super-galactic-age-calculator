@@ -23,27 +23,27 @@ export class SuperGalacticAgeCalculator {
   }
 
 
-  // 31536000 seconds per year
+  // 31536000 seconds per earthYear
 
-  // 1 mercuryYear = 0.24 earthYear or 7568640 earthSeconds
+  // 1 mercuryYear = 0.24 earthYear or 7568640 seconds
 
   mercuryAge() {
     return Math.floor(this.userAgeInSeconds / 7568640); // age in earthSeconds/ mercuryYear in seconds rounded down to int value
   }
 
-  // 1 venusYear = 0.62 earthYear
+  // 1 venusYear = 0.62 earthYear or 19552320 seconds
   venusAge() {
-
+    return Math.floor(this.userAgeInSeconds / 19552320);
   }
 
-  // 1 marsYear = 1.88 earthYear
+  // 1 marsYear = 1.88 earthYear or 59287680 seconds
   marsAge() {
-
+    return Math.floor(this.userAgeInSeconds / 59287680);
   }
 
-  // 1 jupiterYear = 11.86 earthYear
+  // 1 jupiterYear = 11.86 earthYear or 374016960 seconds
   jupiterAge() {
-
+    return Math.floor(this.userAgeInSeconds / 374016960);
   }
 
   // how many years left to live on each planet

@@ -32,7 +32,15 @@ describe('SuperGalacticAgeCalculator', function() {
   })
 
   it('should return the use age in venus years', function() {
-    expect(testCalc.venusAge()).toEqual(120);
+    expect(testCalc.venusAge()).toEqual(51);
+  })
+
+  it('should return the user age in mars years', function() {
+    expect(testCalc.marsAge()).toEqual(17);
+  })
+
+  it('should return the user age in jupieter years', function() {
+    expect(testCalc.jupiterAge()).toEqual(2);
   })
 
 })
