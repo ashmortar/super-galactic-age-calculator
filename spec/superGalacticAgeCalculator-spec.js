@@ -8,17 +8,17 @@ describe('SuperGalacticAgeCalculator', function() {
 
   beforeEach(function () {
 
-      testCalc = new SuperGalacticAgeCalculator(dob);
+      testCalc = new SuperGalacticAgeCalculator(dob, 80);
   })
 
   it('should take age in years and convert into seconds', function() {
     let date = moment('1986-03-25');
     console.log(date.month());
-    expect(testCalc.getUserDOB()).toEqual(date);
+    expect(testCalc.getDateOfBirth()).toEqual(date);
   })
 
   it('should calculate the user age in seconds', function() {
-    expect(testCalc.getUserAgeInSeconds()).toEqual(1009152000);
+    expect(testCalc.getAgeInSeconds()).toEqual(1009152000);
   })
 
   it('should compare two dates and determine difference in seconds', function() {
@@ -28,19 +28,26 @@ describe('SuperGalacticAgeCalculator', function() {
   })
 
   it('should return the user age in mercury years', function() {
-    expect(testCalc.mercuryAge()).toEqual(133);
+    expect(testCalc.getMercuryAge()).toEqual(133);
   })
 
   it('should return the use age in venus years', function() {
-    expect(testCalc.venusAge()).toEqual(51);
+    expect(testCalc.getVenusAge()).toEqual(51);
   })
 
   it('should return the user age in mars years', function() {
-    expect(testCalc.marsAge()).toEqual(17);
+    expect(testCalc.getMarsAge()).toEqual(17);
   })
 
-  it('should return the user age in jupieter years', function() {
-    expect(testCalc.jupiterAge()).toEqual(2);
+  it('should return the user age in jupiter years', function() {
+    expect(testCalc.getJupiterAge()).toEqual(2);
+  })
+
+  it('should return life expectancy for all planets', function() {
+    expect(testCalc.getMercuryLE()).toEqual("You are DEAD!!! ~ you reached your life expectancy 53 mercury years ago.  This means you on average died when you were 12 earth years old");
+    expect(testCalc.getVenusLE()).toEqual('At venus age 80 or in 29 more venus years you would have lived 17 more eath years');
+    expect(testCalc.getMarsLE()).toEqual('At mars age 80 or in 63 more mars years you would have lived 118 more eath years');
+    expect(testCalc.getJupiterLE()).toEqual('At jupiter age 80 or in 78 more jupiter years you would have lived 925 more eath years');
   })
 
 })
