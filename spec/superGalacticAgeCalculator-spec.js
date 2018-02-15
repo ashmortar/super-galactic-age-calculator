@@ -24,7 +24,7 @@ describe('SuperGalacticAgeCalculator', function() {
   it('should compare two dates and determine difference in seconds', function() {
     let testDateOne = moment('1986-03-25');
     let testDateTwo = moment('2018-02-09');
-    expect(testCalc.compareDates(testDateOne, testDateTwo)).toEqual(1006045200);
+    expect(testCalc.compareDates(testDateOne, testDateTwo)).toEqual(1006041600);
   })
 
   it('should return the user age in mercury years', function() {
