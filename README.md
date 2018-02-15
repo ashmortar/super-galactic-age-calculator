@@ -22,6 +22,9 @@ Enter in a date of birth and a life expectancy and get back a bunch of different
 ## Known bugs
 * jasmine V3 and above can cause issues
 
+##Future Functionality
+* report to the user when their next "birthday" on each planet will happen in a normal earth calendar format
+
 ## Technologies Used
 * JavaScript
 * html
